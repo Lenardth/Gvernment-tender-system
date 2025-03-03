@@ -1,0 +1,198 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #333;
+  text-align: center;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #004B87;
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+}
+
+.header-img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+/* Navigation Bar */
+.nav-container {
+  display: flex;
+  justify-content: center;
+  background: #FFD700;
+  padding: 15px;
+}
+
+.nav-container a {
+  text-decoration: none;
+  color: #004B87;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+.nav-container a:hover {
+  background: rgba(0, 75, 135, 0.1);
+  border-radius: 5px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #004B87;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dropbtn:hover {
+  background-color: #002147;
+  transform: scale(1.05);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #FFD700;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Cards */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 30%;
+  text-align: center;
+}
+
+/* Buttons inside Cards */
+.card button {
+  background: #004B87;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.card button:hover {
+  background: #002147;
+}
+
+/* Calculator Tile */
+.calculator {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  text-align: center;
+}
+
+.calculator input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.calculator button {
+  background: #FFD700;
+  color: #004B87;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.calculator button:hover {
+  background: #e6c200;
+}
+
+/* Slideshow */
+.slideshow-container {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.slide {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+}
+
+/* Center Images */
+.vision-img, .responsive-img {
+  display: block;
+  margin: auto;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+  background: #004B87;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}

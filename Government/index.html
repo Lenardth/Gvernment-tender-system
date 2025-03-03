@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tender Monitoring System</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <img src="img/south-africa.png" alt="SA Flag" class="header-img">
+  <h1>Tender Monitoring & Verification System</h1>
+</header>
+
+<nav>
+  <div class="nav-container">
+    <a href="#">Home</a>
+    <a href="#">Tenders</a>
+    <a href="#">Investors</a>
+    <a href="#">Government</a>
+    <a href="#">Contact</a>
+    <a href="#calculator">Calculator</a>
+    <div class="dropdown">
+      <button class="dropbtn">More ▼</button>
+      <div class="dropdown-content">
+        <a href="#">Download Tender Documents</a>
+        <a href="#scoring">Tender 10-Point Scoring System</a>
+        <a href="#">Verify Project Reports</a>
+        <a href="#">Project Status Updates</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="card">
+    <h2>Register as a Contractor</h2>
+    <p>Sign up to access and apply for public tenders.</p>
+    <button onclick="alert('Feature Coming Soon!')">Register Now</button>
+  </div>
+  <div class="card">
+    <h2>Active Tenders</h2>
+    <p>Browse and apply for the latest government and private tenders.</p>
+    <button onclick="alert('Tenders Listing Feature Coming Soon!')">View Tenders</button>
+  </div>
+  <div class="card">
+    <h2>Investor & Government Dashboard</h2>
+    <p>Monitor project funding and ensure milestone-based payments.</p>
+    <button onclick="alert('Investor Dashboard Coming Soon!')">Go to Dashboard</button>
+  </div>
+</div>
+
+<div class="calculator">
+  <h2>Tender Cost Calculator</h2>
+  <p>Estimate the cost of your project before bidding.</p>
+  <input type="number" id="materialCost" placeholder="Material Cost (R)">
+  <input type="number" id="laborCost" placeholder="Labor Cost (R)">
+  <input type="number" id="overhead" placeholder="Overhead Costs (R)">
+  <button onclick="calculateTender()">Calculate Total</button>
+  <h3 id="totalCost">Total Cost: R0</h3>
+</div>
+
+<div class="vision">
+  <h2>Our Vision</h2>
+  <p>To create a transparent, efficient, and accountable tendering process in South Africa, ensuring the completion of public projects for economic growth and job creation.</p>
+  <img src="img/infrastructure.jpg" alt="Infrastructure Development" class="responsive-img">
+</div>
+
+<div class="slideshow-container">
+  <h2>Discover South Africa</h2>
+  <div class="slideshow">
+    <img class="slide" src="img/pexels-jvdm-1524627.jpg" alt="Rhino">
+    <img class="slide" src="img/pexels-khanh-hoang-minh-2-77752098-19301629.jpg" alt="Community">
+    <img class="slide" src="img/pexels-magda-ehlers-pexels-3735461.jpg" alt="African Art">
+    <img class="slide" src="img/pexels-magda-ehlers-pexels-3814243.jpg" alt="Upside-down House">
+    <img class="slide" src="img/pexels-mikegles-30931569.jpg" alt="Cityscape">
+  </div>
+</div>
+
+<div class="social-media">
+  <h2>Follow Us</h2>
+  <a href="#"><img src="img/facebook.png" alt="Facebook" class="social-icon"></a>
+  <a href="#"><img src="img/twitter.png" alt="Twitter" class="social-icon"></a>
+  <a href="#"><img src="img/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+</div>
+
+<script>
+  let slideIndex = 0;
+  function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000);
+  }
+  showSlides();
+</script>
+
+<!-- Footer -->
+<div class="footer">
+  © 2024 Tender Monitoring System | Designed for Transparency and Growth
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
