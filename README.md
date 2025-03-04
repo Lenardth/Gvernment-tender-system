@@ -1,5 +1,4 @@
-# Gvernment-tender-system
-# tender-monitoring-system
+
 # Government Tender Monitoring System
 
 ## Overview
