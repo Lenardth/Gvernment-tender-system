@@ -1,0 +1,24 @@
+pipeline {
+  agent any
+  stages {
+    stage('Build') {
+      steps {
+        echo 'Building the application...'
+        sh 'npm install'
+      }
+    }
+    stage('Test') {
+      steps {
+        echo 'Running tests...'
+        sh 'npm test' // Add tests if needed
+      }
+    }
+    stage('Deploy') {
+      steps {
+        echo 'Deploying the application...'
+        sh 'npm run build' // Build the project
+        sh 'scp -r public/* user@server:/var/www/html' // Deploy to a server
+      }
+    }
+  }
+}
