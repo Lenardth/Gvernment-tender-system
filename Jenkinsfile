@@ -1,33 +1,19 @@
-pipeline {
-    agent any  // This ensures all stages run inside a workspace
+server {
+    listen       80;
+    server_name  localhost;
 
-    stages {
-        stage('Checkout') {
-            steps {
-                checkout scm  // Pulls code from GitHub
-            }
-        }
-
-        stage('Build & Deploy') {
-            steps {
-                sh '''
-                docker build -t flask-api .
-                docker rm -f flask-api || true
-                docker run -d --name flask-api -p 5000:5000 flask-api
-                '''
-            }
-        }
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html;
     }
 
-    post {
-        always {
-            script {
-                // Wrap post-build steps in a node to access workspace
-                node {
-                    echo "Cleaning up..."
-                    sh "docker ps -aq | xargs --no-run-if-empty docker rm -f"  // Cleanup containers
-                }
-            }
-        }
+    # Cache static assets (images, CSS, JS)
+    location ~* \.(jpg|jpeg|png|gif|ico|css|js|webp)$ {
+        expires 365d;
+        add_header Cache-Control "public";
     }
+
+    # Security headers
+    add_header X-Content-Type-Options "nosniff";
+    add_header X-Frame-Options "SAMEORIGIN";
 }
