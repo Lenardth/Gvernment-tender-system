@@ -1,19 +1,29 @@
-server {
-    listen       80;
-    server_name  localhost;
+pipeline {
+    agent any
 
-    location / {
-        root   /usr/share/nginx/html;
-        index  index.html;
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('Build & Deploy Static Site') {
+            steps {
+                sh '''
+                docker build -t nginx-static -f Dockerfile.nginx .
+                docker rm -f nginx-static || true
+                docker run -d --name nginx-static -p 8081:80 nginx-static
+                '''
+            }
+        }
     }
 
-    # Cache static assets (images, CSS, JS)
-    location ~* \.(jpg|jpeg|png|gif|ico|css|js|webp)$ {
-        expires 365d;
-        add_header Cache-Control "public";
+    post {
+        always {
+            script {
+                echo "Cleaning up..."
+                sh "docker ps -aq | xargs --no-run-if-empty docker rm -f"
+            }
+        }
     }
-
-    # Security headers
-    add_header X-Content-Type-Options "nosniff";
-    add_header X-Frame-Options "SAMEORIGIN";
 }
