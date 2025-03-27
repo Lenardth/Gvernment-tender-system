@@ -17,7 +17,7 @@ pipeline {
         stage('Verify Dockerfile') {
             steps {
                 script {
-                    if (!fileExists('eonardth25/tender-monitoring-system')) {
+                    if (!fileExists('leonardth25/tender-monitoring-system')) {
                         error("Dockerfile.nginx not found in workspace!")
                     }
                 }
@@ -27,7 +27,7 @@ pipeline {
         stage('Build & Deploy') {
             steps {
                 sh '''
-                docker build -t ${DOCKER_IMAGE} -f Dockerfile.nginx .
+                docker build -t ${DOCKER_IMAGE} -f leonardth25/tender-monitoring-system .
                 docker rm -f ${DOCKER_IMAGE} || true
                 docker run -d --name ${DOCKER_IMAGE} -p ${PORT}:80 ${DOCKER_IMAGE}
                 '''
