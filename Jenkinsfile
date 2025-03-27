@@ -17,7 +17,7 @@ pipeline {
         stage('Verify Dockerfile') {
             steps {
                 script {
-                    if (!fileExists('Dockerfile.nginx')) {
+                    if (!fileExists('eonardth25/tender-monitoring-system')) {
                         error("Dockerfile.nginx not found in workspace!")
                     }
                 }
