@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'nginx-static'
+        DOCKER_IMAGE = 'leonardth25/tender-monitoring-system' 
         PORT = '8081'
     }
 
