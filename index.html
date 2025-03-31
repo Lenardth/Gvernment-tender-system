@@ -169,34 +169,12 @@
     <!-- Back to Top Button -->
     <button id="backToTop" onclick="scrollToTop()">↑</button>
 
+    <!-- Loading Spinner -->
+    <div class="spinner" id="loadingSpinner"></div>
+
     <!-- Scripts -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="js/script.js"></script>
-    <script>
-        let slideIndex = 0;
-
-        function showSlides() {
-            let slides = document.getElementsByClassName("slide");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 3000);
-        }
-        showSlides();
-
-        function calculateTender() {
-            const materialCost = parseFloat(document.getElementById('materialCost').value) || 0;
-            const laborCost = parseFloat(document.getElementById('laborCost').value) || 0;
-            const overhead = parseFloat(document.getElementById('overhead').value) || 0;
-            const totalCost = materialCost + laborCost + overhead;
-            document.getElementById('totalCost').innerText = `Total Cost: R${totalCost.toFixed(2)}`;
-        }
-    </script>
 </body>
 
 </html>

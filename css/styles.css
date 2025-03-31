@@ -124,7 +124,7 @@ nav {
 
 /* Hero Section */
 .hero {
-  background-image: url('img/hero-bg.jpg');
+  background-image: url('../img/hero-bg.jpg');
   background-size: cover;
   background-position: center;
   height: 400px;
@@ -483,6 +483,20 @@ nav {
   color: #004B87;
 }
 
+/* Vision Section */
+.vision {
+  margin: 40px 0;
+  padding: 20px;
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-container {
@@ -490,7 +504,39 @@ nav {
     align-items: center;
   }
 
-  .nav-container a {
+  .nav-container a {button {
+    background: #FFD700;
+    color: #004B87;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #e6c200;
+  }
+  .calculator-tips ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .calculator-form input,
+  .timeline-calculator input,
+  .roi-calculator input,
+  .comparison-table input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 250px;
+  }
+      
     padding: 10px;
     font-size: 16px;
   }
