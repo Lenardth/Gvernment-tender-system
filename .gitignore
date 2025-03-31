@@ -4,3 +4,5 @@ node_modules/
 *.log
 docker-compose.yml
 *.swp
+minikube-linux-amd64
+kubectl
