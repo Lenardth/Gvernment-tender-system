@@ -6,3 +6,5 @@ docker-compose.yml
 *.swp
 minikube-linux-amd64
 kubectl
+kubectl
+minikube-linux-amd64
