@@ -40,3 +40,4 @@ Follow these steps to set up the project locally.
    ```bash
    git clone https://github.com/Lenardth/Gvernment-tender-system.git
    cd Gvernment-tender-system
+# government_tender_system
