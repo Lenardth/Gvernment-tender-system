@@ -4,7 +4,7 @@
 The **Government Tender System** is a web application designed to monitor and manage government tenders. It provides transparency, real-time updates, and blockchain verification for tender processes.
 
 ---
-Live demo: https://lenardth.github.io/Gvernment-tender-system/
+
 ## Features
 
 - **Tender Search and Filtering**: Easily search and filter tenders by category, budget, and status.
